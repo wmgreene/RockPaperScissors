@@ -1,0 +1,98 @@
+/*Make buttons go on single row.
+Make buttons resize automatically with webpage while staying on single row.
+Make buttons stay a square size.
+Make buttons have a gap between each other.
+
+Style boxes to be square. 
+Put them off screen (Until called)
+Is calling them CSS or Javascript or both?
+
+Fade in pop up declaring if you won or lost. Check if that needs to be CSS or java. */
+
+div#buttons{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-between;
+}
+button.rock{
+    height: 300px;
+    width: 300px;
+    padding:30px
+}
+img.ri{max-height:90%;
+width:100%;}
+button.paper{
+    height: 300px;
+    width: 300px;
+}
+img.pi{max-height:100%;
+width:100%;}
+button.scissors{
+    height: 300px;
+    width: 300px;
+}
+img.si{max-height:100%;
+width:100%;}
+
+/*this is for the box elements that go off screen*/
+div.rc{
+    position:absolute;
+    left:50%;
+    height: 300px;
+    width: 300px;
+    opacity: 0;
+}
+div.rc.animate{
+opacity: 1;
+animation: fadeinrc 2s;
+}
+@keyframes fadeinrc {
+0% {opacity:0;}
+100%{opacity: 1;}
+}
+
+img.rib{max-height:90%;
+width:100%;}
+
+
+div.pc{
+    position:absolute;
+    left:50%;
+    height: 300px;
+    width: 300px;
+    opacity:0;
+}
+
+div.pc.animate{
+    opacity: 1;
+    animation: fadeinpc 2s;
+    }
+@keyframes fadeinpc {
+    0% {opacity:0;}
+    100%{opacity: 1;}
+    }
+    
+img.pic{max-height:100%;
+width:100%;}
+
+
+div.sc{
+    position:absolute;
+    left:50%;
+    height: 300px;
+    width: 300px;
+    opacity:0;
+}
+div.sc.animate{
+    opacity: 1;
+    animation: fadeinsc 2s;
+    }
+@keyframes fadeinsc {
+    0% {opacity:0;}
+    100%{opacity: 1;}
+    }
+    
+
+img.sic{max-height:100%;
+width:100%;}

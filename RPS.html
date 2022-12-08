@@ -1,22 +1,47 @@
 <!--Rock Paper Scissors
-Make three boxes.
-Inside the boxes separate text section for identifying text and image.
+Make three buttons.
+Inside the buttons separate sections for identifying text and image.
+Make three boxes. 
+Box for rock, box for paper, box for scissors.
 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="RPSS.css">
+    <script src="RPSJS.js"></script>
   </head>
   <body>
-    <div class ="rock">
-      <img src="rock.jpg" class="rock-image">
+    <div id="buttons">
+        <button onclick="rock()" class ="rock">
+            <img src="rock.jpg" class="ri">
+            <p class="rt">Rock</p>
+        </button>
+        
+        <button onclick ="paper()" class ="paper">
+            <img src="paper.jpg" class="pi">
+            <p class="pt">Paper</p>
+        </button>
+        <button onclick ="scissors()" class="scissors">
+            <img src="scissors.jpg" class="si">
+            <p class="st">Scissors</p>
+        </button>
     </div>
-    <div class ="paper">
-        <img src="paper.jpg" class="paper-image">
+<!--div for boxes-->
+<div id="box">
+    <div id= "hrock" class="rc">
+        <img src="rock.jpg" class="rib">
     </div>
-    <div class="scissors">
-        <img src="scissors.jpg" class="scissors-image">
+    <div id= "hpaper" class="pc">
+        <img src="paper.jpg" class="pic">
     </div>
+    <div id="hscissors" class="sc">
+        <img src="scissors.jpg" class="sic">
+    </div>
+</div>
+<div>
+    <p id="output"></p>
+</div>
   </body>
 </html>
